@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redmi 13C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .product-detail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-images {
+            flex: 1 1 45%;
+            text-align: center;
+        }
+
+        .product-images img {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-info {
+            flex: 1 1 45%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info h2 {
+            margin-top: 0;
+        }
+
+        .product-price {
+            color: #b12704;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .product-description {
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            color: #fff;
+        }
+
+        .add-to-cart {
+            background: #007bff;
+        }
+
+        .add-to-cart:hover {
+            background: #0056b3;
+        }
+
+        .book {
+            background: #28a745;
+        }
+
+        .book:hover {
+            background: #218838;
+        }
+
+        .product-specifications,
+        .user-ratings,
+        .comments,
+        .delivery-date {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-specifications h3,
+        .user-ratings h3,
+        .comments h3,
+        .delivery-date h3 {
+            margin-top: 0;
+        }
+
+        .product-specifications ul,
+        .user-ratings ul,
+        .comments ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-specifications ul li,
+        .user-ratings ul li,
+        .comments ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .rating {
+            color: #f0ad4e;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .comment-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .comment-form button:hover {
+            background: #0056b3;
+        }
+
+        .comments ul li {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .mrp {
+            font-size: 14px;
+        }
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border:2px solid;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #ff5c5c;
+            color: white;
+        }
+        
+        
+    </style>
+    <script>
+        function addComment() {
+            const commentText = document.getElementById('comment-text').value;
+            const commentList = document.getElementById('comment-list');
+            const newComment = document.createElement('li');
+            newComment.textContent = commentText;
+            newComment.style.background = 'linear-gradient(135deg, #ffecd2, #fcb69f)';
+            newComment.style.margin = '10px 0';
+            newComment.style.padding = '15px';
+            newComment.style.borderRadius = '8px';
+            commentList.appendChild(newComment);
+            document.getElementById('comment-text').value = '';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Product Details</h1>
+    </div>
+    <div class="container">
+        <div class="product-detail">
+            <div class="product-images">
+                <img src="https://m.media-amazon.com/images/I/61lsexTCOhL._AC_SL1500_.jpg"
+                    alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h2>Apple Macbook Pro Laptop</h2>
+                <div class="product-price">0% Discount <br>₹ 1,11,314.85 <br>
+                </div>
+                <div class="product-description">
+                    <p>Apple 2023 MacBook Pro Laptop M3 chip with 8‑core CPU, 10‑core GPU: 14.2-inch Liquid Retina XDR Display, 8GB Unified Memory, 
+                        512GB SSD Storage. Works with iPhone/iPad; Silver
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                    <a href="book.html" class="book">Book</a>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-date">
+            <h3>Estimated Delivery Date</h3>
+            <p>Expected delivery by: 12th June 2024</p>
+        </div>
+        <div class="product-specifications">
+            <h3>Specifications</h3>
+            <ul>
+                <li>Brand Apple</li>
+                <li>Model Namw: MacBook Pro</li>
+                <li>Screen Size Color : 14.2 Inches Silver</li>
+                <li>Hard Disk Size : 512GB</li>
+                <li>Ram Memory Installed Size: 8GB</li>
+                <li>Operating System : Mac OS</li>
+                <li>
+                    Graphics Card Description : Integrated
+                </li>
+                <li>
+                    Graphics Coprocessor : Apple Integrated Graphics
+                </li>
+                <li>CPU Speed: 1</li>
+
+
+                
+                
+            </ul>
+        </div>
+        <div class="product-specifications">
+            <h3>About this item</h3>
+           <li>SUPERCHARGED BY M3 — With an 8-core CPU and 10-core GPU, the Apple M3 chip can help you blaze through everyday multitasking and take on pro projects like editing thousands of photos or 4K video.</li> 
+          <li>UP TO 22 HOURS OF BATTERY LIFE — Go all day thanks to the power-efficient design of Apple silicon. The MacBook Pro laptop delivers the same exceptional performance whether it’s running on battery or plugged in. (Battery life varies by use and configuration. See apple.com/batteries for more information.)</li>
+          <li>BRILLIANT PRO DISPLAY — The 14.2-inch Liquid Retina XDR display features Extreme Dynamic Range, over 1000 nits of brightness for stunning HDR content, up to 600 nits of brightness for SDR content, and pro reference modes for doing your best work on the go. (The display has rounded corners at the top. When measured diagonally, the screen is 14.2 inches. Actual viewable area is less.)</li>
+          <li>FULLY COMPATIBLE — All your pro apps run lightning fast — including Adobe Creative Cloud, Apple Xcode, Microsoft 365, Medivis SurgicalAR, and many of your favorite iPhone and iPad apps. And with macOS, work and play on your Mac are even more powerful. Elevate your presence on video calls. Access information in all-new ways. And discover even more ways to personalize your Mac. (Apps are available on the App Store.)</li>
+          <li>ADVANCED CAMERA AND AUDIO — Look sharp and sound great with a 1080p FaceTime HD camera, a studio-quality three-mic array, and a six-speaker sound system with Spatial Audio.</li>
+          <li>CONNECT IT ALL — This MacBook Pro features a MagSafe charging port, two Thunderbolt / USB 4 ports, an SDXC card slot, an HDMI port, and a headphone jack. Enjoy fast wireless connectivity with Wi-Fi 6E and Bluetooth 5.3. Supports one external display. (Wi‑Fi 6E available in countries and regions where supported.)
+          </li>
+
+        </div>
+
+        <div class="user-ratings">
+            <h3>Ratings</h3>
+            <ul>
+                <li>
+                    <span class="rating">★★★★☆</span> by User 1
+                </li>
+                <li>
+                    <span class="rating">★★★☆☆</span> by User 2
+                </li>
+            </ul>
+        </div>
+        <div class="comments">
+            <h3>Comments</h3>
+            <ul id="comment-list">
+                <li>Comment 1 by User 1: Great product!</li>
+                <li>Comment 2 by User 2: Satisfactory performance.</li>
+            </ul>
+            <div class="comment-form">
+                <h3>Add a Comment</h3>
+                <textarea id="comment-text" rows="4" placeholder="Write your comment here..."></textarea>
+                <button type="button" onclick="addComment()">Submit</button>
+            </div>
+        </div>
+        <div class="back-button">
+            <a href="electronics.html" class="btn">Back</a>
+        </div>
+    </div>
+</body>
+
+</html>

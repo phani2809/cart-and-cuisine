@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+.top{
+    height: 130px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+body{
+    background: skyblue
+}
+.middle{
+    height:700px;
+    display: flex;
+}
+#mid{
+    padding-left: 400px;
+}
+.bottom{
+    height:150px;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.signup{
+    margin-left: 240px;
+   
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.login{
+    margin-left: 60px;
+    
+}
+.signup:hover{
+    border: 2px solid white;
+    text-transform: uppercase;
+    
+    border-radius: 55px;
+    padding: 15px;
+
+}
+.text{
+    margin: 10px 10px 10px 10px;
+}
+.login:hover{
+    border: 2px solid white;
+    text-transform: uppercase;
+    border-radius: 55px;
+    padding: 15px;
+}
+.food{
+   
+    border: 2px solid black;
+    height: 650px;
+    width: 750px;
+    margin: 20px;
+    /* border-radius: 20px; */
+}
+.shopping{
+    
+    border: 2px solid black;
+    height: 650px;
+    width: 750px;
+    margin: 20px;
+    /* border-radius: 20px; */
+} 
+img{
+    height: 647px;
+    width: 750px;
+    /* position: relative; */
+  }
+    /* Slideshow for food */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    
+  }
+  
+  
+  .mySlides {
+    display: none;
+  }
+  @keyframes fadeEffect {
+    from {opacity: .4}
+    to {opacity: 1}
+  } 
+   /* Slideshow for shopping   */
+   .container-ss {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    
+  }
+  
+  
+  .Slides {
+    display: none;
+  }
+  @keyframes fadeEffect {
+    from {opacity: .4}
+    to {opacity: 1}
+  }    
+  
+ /* .logo{
+    width:10px;
+    height:10px;
+ } */
+ 
+ 
+ .logo{
+    width: 150px;
+    height: 130px;
+    margin-left: 30px;
+ }
+ .logo:hover{
+    border: 2px solid white;
+    border-radius: 25px;
+  
+   }
+ i{
+    margin: 20px;
+ }
+ .copyright{
+    margin-top: 20px;
+ }

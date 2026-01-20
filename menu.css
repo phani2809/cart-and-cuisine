@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #8E806A, #C3B091,#E4CDA7,#FFE6BC);
+}
+
+header {
+    background-color: #333; /* Dark background for header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.menu-category {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fef0eb; /* Peach background for menu category */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.menu-category h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white; /* White color for title */
+    text-align: center;
+    background-color: #222; /* Dark background for heading */
+    padding: 10px 0; /* Adjust padding for heading */
+    border-top-left-radius: 10px; /* Rounded corners for heading */
+    border-top-right-radius: 10px; /* Rounded corners for heading */
+}
+
+.menu-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.menu-category ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333; /* Dark gray color for items */
+    text-align: center;
+    background-color: #fde2e4; /* Light pink background for items */
+    border: 1px solid #fccfd0; /* Border for items */
+    border-radius: 5px; /* Rounded corners for items */
+    padding: 8px 12px; /* Padding for items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for items */
+    transition: all 0.3s ease;
+}
+
+.menu-category ul li:hover {
+    background-color: #b5838d; /* Darker pink background on hover */
+    color: white; /* White text color on hover */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
