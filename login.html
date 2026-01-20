@@ -11,9 +11,6 @@
         <div class="title">
             Login 
         </div>
-        <?php if ($error): ?>
-            <div class="error"><?php echo $error; ?></div>
-        <?php endif; ?>
         <form method="POST" action="main1.html">
             <div class="field">
                 <input type="text" id="email" name="email" required>
@@ -36,9 +33,10 @@
                 <input type="submit" value="Login">
             </div>
             <div class="signup-link">
-                Not a member? <a href="signup.php">Signup now</a>
+                Not a member? <a href="signup.html">Signup now</a>
             </div>
         </form>
     </div>
 </body>
 </html>
+
