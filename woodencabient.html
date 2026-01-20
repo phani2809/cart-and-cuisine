@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooden Cabinet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .product-detail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-images {
+            flex: 1 1 45%;
+            text-align: center;
+        }
+
+        .product-images img {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-info {
+            flex: 1 1 45%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info h2 {
+            margin-top: 0;
+        }
+
+        .product-price {
+            color: #b12704;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .product-description {
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            color: #fff;
+        }
+
+        .add-to-cart {
+            background: #007bff;
+        }
+
+        .add-to-cart:hover {
+            background: #0056b3;
+        }
+
+        .book {
+            background: #28a745;
+        }
+
+        .book:hover {
+            background: #218838;
+        }
+
+        .product-specifications,
+        .user-ratings,
+        .comments,
+        .delivery-date {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-specifications h3,
+        .user-ratings h3,
+        .comments h3,
+        .delivery-date h3 {
+            margin-top: 0;
+        }
+
+        .product-specifications ul,
+        .user-ratings ul,
+        .comments ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-specifications ul li,
+        .user-ratings ul li,
+        .comments ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .rating {
+            color: #f0ad4e;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .comment-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .comment-form button:hover {
+            background: #0056b3;
+        }
+
+        .comments ul li {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .mrp {
+            font-size: 14px;
+        }
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border:2px solid;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #ff5c5c;
+            color: white;
+        }
+        
+        
+    </style>
+    <script>
+        function addComment() {
+            const commentText = document.getElementById('comment-text').value;
+            const commentList = document.getElementById('comment-list');
+            const newComment = document.createElement('li');
+            newComment.textContent = commentText;
+            newComment.style.background = 'linear-gradient(135deg, #ffecd2, #fcb69f)';
+            newComment.style.margin = '10px 0';
+            newComment.style.padding = '15px';
+            newComment.style.borderRadius = '8px';
+            commentList.appendChild(newComment);
+            document.getElementById('comment-text').value = '';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Product Details</h1>
+    </div>
+    <div class="container">
+        <div class="product-detail">
+            <div class="product-images">
+                <img src="https://m.media-amazon.com/images/I/8131wQPBSuL._AC_UL480_FMwebp_QL65_.jpg"
+                    alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h2>Wooden Cabinet</h2>
+                <div class="product-price">-32% Discount <br>₹3799<br><span class="mrp"><strike>M.R.P:
+                            ₹5,599</strike></span>
+                </div>
+                <div class="product-description">
+                    <p>ABOUT SPACE Wooden Cabinet - 3 Tier Engineered Wood DIY Storage Cabinet for Living Room with
+                        Magnetic Door, Space Saving Furniture for Home, Kitchen (Oak Red - L 38 x B 38 x H 100.5 cm)
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                    <a href="book.html" class="book">Book</a>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-date">
+            <h3>Estimated Delivery Date</h3>
+            <p>Expected delivery by: 14th June 2024</p>
+        </div>
+        <div class="product-specifications">
+            <h3>Specifications</h3>
+            <ul>
+
+                <li>Brand: ABOUT SPACE</li>
+                <li> Product Dimensions: 38D x 38W x 100.5H Centimeters</li>
+                <li>Frame Material: Wood</li>
+                <li> Colour: Oak Red-3 Tier</li>
+                <li> Product Care Instructions: Wipe with Dry Cloth</li>
+                <li> Recommended Uses For Product: kitchen</li>
+                <li> Shape: Rectangular</li>
+                <li>Style: modern</li>
+                <li>Finish Type: Glossy</li>
+                <li>Base Type: Leg</li>
+            </ul>
+        </div>
+        <div class="product-specifications">
+            <h3>About this item</h3>
+           <li> STORAGE CABINET for KITCHEN: Furnish your home with ABOUT SPACE modern kitchen cabinet with 3 doors for
+            storage and a flat space for display ensures stability and durability that will last you a lifetime. Its
+            slim and elegant design will surely add a modern vibe to any decor</li>
+            <li>MATERIAL & DIMENSION: The multipurpose cabinet is made of engineered wood with foot pad and magnetic doors
+                with zinc handles. The small wooden cabinet measures L 38 x B 38 x H 100.5 cm</li>
+            <li>SPACIOUS & SPACE SAVING: It has ample space to store all your belongings. The small almirah wooden features
+                3 cabinet doors to safely keep your important things like files, books, tablets, documents in the cabinets
+                and decor, night lamp and clock on top</li>
+            <li>EASY TO INSTALL: The multipurpose cabinet for storage comes with detailed and illustrated instructions. All
+                required tools to ensure a smooth DIY assembly. Comes with foot pad to protect the floor from scratches &
+                prevent wobbling</li>
+            <li>VERSATILE AND EASY TO CLEAN: The three-door book cabinet complements any decor making it a great addition to
+                your bedroom and living room. Its smooth surface makes it easy to clean. Simply wipe it with a damp cloth to
+                remove dirt</li>
+        </div>
+
+        <div class="user-ratings">
+            <h3>Ratings</h3>
+            <ul>
+                <li>
+                    <span class="rating">★★★★☆</span> by User 1
+                </li>
+                <li>
+                    <span class="rating">★★★☆☆</span> by User 2
+                </li>
+            </ul>
+        </div>
+        <div class="comments">
+            <h3>Comments</h3>
+            <ul id="comment-list">
+                <li>Comment 1 by User 1: Great product!</li>
+                <li>Comment 2 by User 2: Satisfactory performance.</li>
+            </ul>
+            <div class="comment-form">
+                <h3>Add a Comment</h3>
+                <textarea id="comment-text" rows="4" placeholder="Write your comment here..."></textarea>
+                <button type="button" onclick="addComment()">Submit</button>
+            </div>
+        </div>
+        <div class="back-button">
+            <a href="home&furniture.html" class="btn">Back</a>
+        </div>
+    </div>
+</body>
+
+</html>
