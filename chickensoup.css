@@ -1,0 +1,124 @@
+body {
+    background: linear-gradient(-45deg, #8E806A, #C3B091,#E4CDA7,#FFE6BC);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #d9534f, #ff5c5c);
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.recipe-image {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.recipe-image img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-image img:hover {
+    transform: scale(1.05);
+}
+
+.recipe-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ingredients,
+.instructions {
+    width: 45%;
+    background-color: #f8f5f2;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    border-left: 5px solid #d9534f;
+}
+
+.ingredients h2,
+.instructions h2 {
+    font-size: 2em;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.ingredients ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.ingredients li,
+.instructions p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.instructions p strong {
+    font-weight: 600;
+}
+
+.instructions h2 {
+    margin-top: 30px;
+}
+.back-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border:2px solid;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff5c5c;
+    color: white;
+}
+

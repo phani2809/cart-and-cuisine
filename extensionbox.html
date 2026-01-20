@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .product-detail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-images {
+            flex: 1 1 45%;
+            text-align: center;
+        }
+
+        .product-images img {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-info {
+            flex: 1 1 45%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info h2 {
+            margin-top: 0;
+        }
+
+        .product-price {
+            color: #b12704;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .product-description {
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            color: #fff;
+        }
+
+        .add-to-cart {
+            background: #007bff;
+        }
+
+        .add-to-cart:hover {
+            background: #0056b3;
+        }
+
+        .book {
+            background: #28a745;
+        }
+
+        .book:hover {
+            background: #218838;
+        }
+
+        .product-specifications,
+        .user-ratings,
+        .comments,
+        .delivery-date {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-specifications h3,
+        .user-ratings h3,
+        .comments h3,
+        .delivery-date h3 {
+            margin-top: 0;
+        }
+
+        .product-specifications ul,
+        .user-ratings ul,
+        .comments ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-specifications ul li,
+        .user-ratings ul li,
+        .comments ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .rating {
+            color: #f0ad4e;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .comment-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .comment-form button:hover {
+            background: #0056b3;
+        }
+
+        .comments ul li {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .mrp {
+            font-size: 14px;
+        }
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border:2px solid;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #ff5c5c;
+            color: white;
+        }
+        
+        
+    </style>
+    <script>
+        function addComment() {
+            const commentText = document.getElementById('comment-text').value;
+            const commentList = document.getElementById('comment-list');
+            const newComment = document.createElement('li');
+            newComment.textContent = commentText;
+            newComment.style.background = 'linear-gradient(135deg, #ffecd2, #fcb69f)';
+            newComment.style.margin = '10px 0';
+            newComment.style.padding = '15px';
+            newComment.style.borderRadius = '8px';
+            commentList.appendChild(newComment);
+            document.getElementById('comment-text').value = '';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Product Details</h1>
+    </div>
+    <div class="container">
+        <div class="product-detail">
+            <div class="product-images">
+                <img src="https://m.media-amazon.com/images/I/519RgXY+lRL._AC_UY327_FMwebp_QL65_.jpg"
+                    alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h2>Extension Box</h2>
+                <div class="product-price">-31% Discount <br>₹448<br><span class="mrp"><strike>M.R.P:
+                            ₹650</strike></span>
+                </div>
+                <div class="product-description">
+                    <p>GM 3060 E-Book 4 + 1 Power Strip Red & White Color 250 Volts with Master Switch, Indicator,
+                        Safety Shutter & 4 International sockets, Extension Cord for Home Appliances
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                    <a href="book.html" class="book">Book</a>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-date">
+            <h3>Estimated Delivery Date</h3>
+            <p>Expected delivery by: 15th June 2024</p>
+        </div>
+        <div class="product-specifications">
+            <h3>Specifications</h3>
+            <ul>
+                <li>Brand: GM</li>
+                <li>Colour: Mulitcolor</li>
+                <li>Total Power Outlets: 4</li>
+                <li> Voltage: 250 Volts</li>
+                <li>Special Feature: On And Off Switch</li>
+
+            </ul>
+        </div>
+        <div class="product-specifications">
+            <h3>About this item</h3>
+            <li>Verstile International sockets (with child safety shutter) The safety shutter keeps children safe & also
+                prevents dust from getting into unsend sockets overtime.</li>
+           <li> 2 Meter Heavy duty cord A special nylon velcro cable tie has been provided on the long power cord for
+            convenience during operation and storage.</li>
+            <li>Supply Indicator The Spike guard has an LED Supply indicator embedded in the ergonomic design that indicates
+                power status if On/Off.</li>
+            <li>Novel & Distinctive design Combination of advanced mould design, unique exquisite workmanship & our
+                commitment to perfection have rendered the product its excellent quality.</li>
+           <li> Safety shutdown technology It has Thermal overload trip to power off your system, which saves all connected
+            devices in the event of a severe over current or when the surge protection is disable. You can press red
+            button to return to safe function mode. Ergonomic design- Adequate space has been provided between the
+            sockets for accommodating plugs of different designs. Suitable for household, office, computer and its
+            Peripherals, DVD, T.V etc</li>
+        </div>
+
+        <div class="user-ratings">
+            <h3>Ratings</h3>
+            <ul>
+                <li>
+                    <span class="rating">★★★★☆</span> by User 1
+                </li>
+                <li>
+                    <span class="rating">★★★☆☆</span> by User 2
+                </li>
+            </ul>
+        </div>
+        <div class="comments">
+            <h3>Comments</h3>
+            <ul id="comment-list">
+                <li>Comment 1 by User 1: Great product!</li>
+                <li>Comment 2 by User 2: Satisfactory performance.</li>
+            </ul>
+            <div class="comment-form">
+                <h3>Add a Comment</h3>
+                <textarea id="comment-text" rows="4" placeholder="Write your comment here..."></textarea>
+                <button type="button" onclick="addComment()">Submit</button>
+            </div>
+        </div>
+        <div class="back-button">
+            <a href="appliances.html" class="btn">Back</a>
+        </div>
+    </div>
+</body>
+
+</html>

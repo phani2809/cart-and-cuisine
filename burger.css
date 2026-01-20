@@ -1,0 +1,112 @@
+*{
+    margin:0px;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+    
+}
+.header{
+    height: 80px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #8E806A, #C3B091,#E4CDA7,#FFE6BC);
+}
+.header .navbar a{
+    font-size: 1.5rem;
+   color: black;
+    margin-left: 4rem;
+}
+.border{
+    text-decoration: none;
+    margin-left: 130px;
+    /* color: white; */
+}
+.border:hover{
+    /* margin: 20px; */
+    border: 3px solid;
+    border-radius: 20px;
+    background-color: white;}
+.box{
+    height:900px;
+    border: 2px solid;
+    margin:80px 100px 80px 100px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background: linear-gradient(-45deg, #8E806A, #C3B091,#E4CDA7,#FFE6BC);
+    
+    
+}
+.burger{
+    /* border: 2px solid red; */
+    height:250px;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+    display: flex;
+}
+.chickenburger{
+    /* border: 2px solid red; */
+    height:250px;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+    display: flex;
+}
+.pannerburger{
+    /* border: 2px solid red; */
+    height:250px;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+    display: flex;
+}
+
+img{
+    height:180px;
+    margin: 30px 30px 30px 50px;
+    width:200px;
+    border-radius: 20px;
+    /* padding-left: 130px; */
+}
+.copyright{
+    margin-top: 20px;
+ }
+ i{
+    margin: 20px;
+    color: white;
+
+ }
+ .bottom{
+    height:150px;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+strong{
+    font-size: 32px;
+    margin:60px;
+}
+.text1{
+    font-weight: lighter;
+    font-size: 24px;
+}
+.text2{
+    font-weight: lighter;
+    font-size: 24px;
+}
+.text3{
+    font-weight: lighter;
+    font-size: 24px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.header{
+    height: 80px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #8E806A, #C3B091,#E4CDA7,#FFE6BC);
+}
+.header .navbar a{
+    font-size: 1.5rem;
+   color: black;
+    margin-left: 4rem;
+}
+.main{
+    height: 600px;
+    width: 100;
+    /* background-color: rgb(203, 43, 43); */
+     /* border: 3px solid blue; */
+    background-image: url(main.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+   
+}
+.text{
+    line-height: 50px;
+    margin-left: 40px;
+}
+.text1{
+    font-size: 42px;
+    margin: 20px;
+    color: rgb(235, 144, 36);
+}
+.border{
+    text-decoration: none;
+    margin-left: 130px;
+    /* color: white; */
+}
+.border:hover{
+    /* margin: 20px; */
+    border: 3px solid;
+    border-radius: 55px;
+    background-color: white;
+    padding: 10px;
+
+}
+.first-line{
+    display: flex;
+
+}
+.second-line{
+    display: flex;
+
+}
+.third-line{
+    display: flex;
+
+}
+
+.mid-section{
+    height: 760;
+    background: linear-gradient(-135deg, #8E806A, #C3B091,#E4CDA7,#FFE6BC);
+}
+.border1:hover{
+    height: 350px;
+    width: 310px;
+    border: 3px solid;
+    
+}
+.border2:hover{
+    height: 180px;
+    width: 240px;}
+.box1{
+    /* border: 2px solid rgb(19, 189, 79); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box2{
+    /* border: 2px solid rgb(17, 167, 180); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box3{
+    /* border: 2px solid rgb(203, 25, 25); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box4{
+    /* border: 2px solid rgb(119, 22, 120); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box5{
+    /* border: 2px solid rgb(136, 171, 29); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box6{
+    /* border: 2px solid rgb(19, 189, 79); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box7{
+    /* border: 2px solid rgb(17, 167, 180); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box8{
+    /* border: 2px solid rgb(203, 25, 25); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box9{
+    /* border: 2px solid rgb(119, 22, 120); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box10{
+    /* border: 2px solid rgb(136, 171, 29); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box11{
+    /* border: 2px solid rgb(136, 171, 29); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box12{
+    /* border: 2px solid rgb(136, 171, 29); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box13{
+    /* border: 2px solid rgb(136, 171, 29); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box14{
+    /* border: 2px solid rgb(136, 171, 29); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+.box15{
+    /* border: 2px solid rgb(136, 171, 29); */
+    height: 280px;
+    width: 290px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px  grey;
+    background-color: white;
+}
+
+
+.img1{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img2{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img3{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img4{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img5{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img6{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img7{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img8{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img9{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img10{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img11{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img12{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img13{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img14{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.img15{
+    height: 157px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.copyright{
+    margin-top: 20px;
+ }
+ i{
+    margin: 20px;
+    color: white;
+
+ } 
+ .bottom{
+    height:150px;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+strong{
+    
+    font-size: 32px;
+}
+span{
+    color: black;
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinning Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .product-detail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-images {
+            flex: 1 1 45%;
+            text-align: center;
+        }
+
+        .product-images img {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-info {
+            flex: 1 1 45%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info h2 {
+            margin-top: 0;
+        }
+
+        .product-price {
+            color: #b12704;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .product-description {
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            color: #fff;
+        }
+
+        .add-to-cart {
+            background: #007bff;
+        }
+
+        .add-to-cart:hover {
+            background: #0056b3;
+        }
+
+        .book {
+            background: #28a745;
+        }
+
+        .book:hover {
+            background: #218838;
+        }
+
+        .product-specifications,
+        .user-ratings,
+        .comments,
+        .delivery-date {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-specifications h3,
+        .user-ratings h3,
+        .comments h3,
+        .delivery-date h3 {
+            margin-top: 0;
+        }
+
+        .product-specifications ul,
+        .user-ratings ul,
+        .comments ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-specifications ul li,
+        .user-ratings ul li,
+        .comments ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .rating {
+            color: #f0ad4e;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .comment-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .comment-form button:hover {
+            background: #0056b3;
+        }
+
+        .comments ul li {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .mrp {
+            font-size: 14px;
+        }
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border:2px solid;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #ff5c5c;
+            color: white;
+        }
+        
+        
+    </style>
+    <script>
+        function addComment() {
+            const commentText = document.getElementById('comment-text').value;
+            const commentList = document.getElementById('comment-list');
+            const newComment = document.createElement('li');
+            newComment.textContent = commentText;
+            newComment.style.background = 'linear-gradient(135deg, #ffecd2, #fcb69f)';
+            newComment.style.margin = '10px 0';
+            newComment.style.padding = '15px';
+            newComment.style.borderRadius = '8px';
+            commentList.appendChild(newComment);
+            document.getElementById('comment-text').value = '';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Product Details</h1>
+    </div>
+    <div class="container">
+        <div class="product-detail">
+            <div class="product-images">
+                <img src="https://m.media-amazon.com/images/I/71aJ396MVLL._AC_UL960_FMwebp_QL65_.jpg"
+                    alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h2>Dinning Table</h2>
+                <div class="product-price">-31% Discount <br>₹28,999<br><span class="mrp"><strike>M.R.P:
+                            ₹41,999</strike></span>
+                </div>
+                <div class="product-description">
+                    <p>Porash Furniture Sheesham Wood 6 Seater Dining Table with 6 Cushion Chairs 6 Seater Wooden Dining
+                        Room Set Wooden Dinner Table Furniture for Living Room Home (Chestnut Teak)
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                    <a href="book.html" class="book">Book</a>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-date">
+            <h3>Estimated Delivery Date</h3>
+            <p>Expected delivery by: 21th June 2024</p>
+        </div>
+        <div class="product-specifications">
+            <h3>Specifications</h3>
+            <ul>
+                <li>Colour: Chestnut Teak</li>
+                <li>Brand: Porash Furniture</li>
+                <li> Size: 6 Seater</li>
+                <li> Shape: Rectangular</li>
+                <li> Product Care Instructions: Wipe with Dry Cloth</li>
+
+            </ul>
+        </div>
+        <div class="product-specifications">
+            <h3>About this item</h3>
+            <li>Sheehsham Wood Dining Table Set Dimensions: Table - Length (149.86 cm), Width (99.06 cm), Height (76.2 cm);
+                Chair- Length (45.72 cm), Width (45.72 cm), Height (68.58 cm), pillows are not Included.</li>
+           <li> Dining Table Primary Material: Solid Sheesham Wood, Secondary Material: MDF, Color: Chestnut Teak , Style:
+            Contemporary</li>
+            <li>commentListomplete Set: Includes a spacious dining table and six matching chairs, providing everything needed to
+                create a cohesive and stylish dining area in your home.</li>
+            <li>Versatile Usage: Suitable for various settings including living rooms, home offices, or dining rooms,
+                providing functionality and style wherever it's placed.</li>
+           <li> This dining table set requires basic self assembly at customers end and comes with self assembly (DIY)
+            instructions along with necessary accessories.</li>
+            <li>The warranty provides coverage for manufacturing defects for 1 year | Any physical damage incurred to the
+                product is not covered under this warranty.</li>
+        </div>
+
+        <div class="user-ratings">
+            <h3>Ratings</h3>
+            <ul>
+                <li>
+                    <span class="rating">★★★★☆</span> by User 1
+                </li>
+                <li>
+                    <span class="rating">★★★☆☆</span> by User 2
+                </li>
+            </ul>
+        </div>
+        <div class="comments">
+            <h3>Comments</h3>
+            <ul id="comment-list">
+                <li>Comment 1 by User 1: Great product!</li>
+                <li>Comment 2 by User 2: Satisfactory performance.</li>
+            </ul>
+            <div class="comment-form">
+                <h3>Add a Comment</h3>
+                <textarea id="comment-text" rows="4" placeholder="Write your comment here..."></textarea>
+                <button type="button" onclick="addComment()">Submit</button>
+            </div>
+        </div>
+        <div class="back-button">
+            <a href="home&furniture.html" class="btn">Back</a>
+        </div>
+    </div>
+</body>
+
+</html>

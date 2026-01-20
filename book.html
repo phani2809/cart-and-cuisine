@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .button {
+            padding: 15px;
+            background: #28a745;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .button:hover {
+            background: #218838;
+        }
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .payment-methods label {
+            font-weight: normal;
+        }
+        .scanner {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Enter Your Details</h1>
+    </div>
+    <div class="container">
+        <form action="/submit-booking" method="post">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="address">Delivery Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="net-banking">Net Banking</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+            </div>
+            <div id="card-details" class="hidden">
+                <div>
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number">
+                    <span class="scanner">Scan</span>
+                </div>
+                <div>
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv">
+                </div>
+            </div>
+            <div id="net-banking-details" class="hidden">
+                <div>
+                    <label for="bank">Choose Bank</label>
+                    <select id="bank" name="bank">
+                        <option value="bank1">Bank of Boroda</option>
+                        <option value="bank2">SBI</option>
+                        <option value="bank3">HDFC</option>
+                        <option value="bank4">Union Bank</option>
+                        <option value="bank5">Indian Bank</option>
+                        <option value="bank6">Other Bank</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="account-number">Account Number</label>
+                    <input type="text" id="account-number" name="account-number">
+                </div>
+                <div>
+                    <label for="ifsc">IFSC Code</label>
+                    <input type="text" id="ifsc" name="ifsc">
+                </div>
+            </div>
+            <button type="submit" class="button">Submit Booking</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('payment-method').addEventListener('change', function() {
+            const cardDetails = document.getElementById('card-details');
+            const netBankingDetails = document.getElementById('net-banking-details');
+            if (this.value === 'credit-card' || this.value === 'debit-card') {
+                cardDetails.classList.remove('hidden');
+                netBankingDetails.classList.add('hidden');
+            } else if (this.value === 'net-banking') {
+                netBankingDetails.classList.remove('hidden');
+                cardDetails.classList.add('hidden');
+            } else {
+                cardDetails.classList.add('hidden');
+                netBankingDetails.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almonds & Cashews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .product-detail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-images {
+            flex: 1 1 45%;
+            text-align: center;
+        }
+
+        .product-images img {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-info {
+            flex: 1 1 45%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info h2 {
+            margin-top: 0;
+        }
+
+        .product-price {
+            color: #b12704;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .product-description {
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            color: #fff;
+        }
+
+        .add-to-cart {
+            background: #007bff;
+        }
+
+        .add-to-cart:hover {
+            background: #0056b3;
+        }
+
+        .book {
+            background: #28a745;
+        }
+
+        .book:hover {
+            background: #218838;
+        }
+
+        .product-specifications,
+        .user-ratings,
+        .comments,
+        .delivery-date
+         {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-specifications h3,
+        .user-ratings h3,
+        .comments h3,
+        .delivery-date h3
+         {
+            margin-top: 0;
+        }
+
+        .product-specifications ul,
+        .user-ratings ul,
+        .comments ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-specifications ul li,
+        .user-ratings ul li,
+        .comments ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .rating {
+            color: #f0ad4e;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .comment-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .comment-form button:hover {
+            background: #0056b3;
+        }
+
+        .comments ul li {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .mrp {
+            font-size: 14px;
+        }
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border:2px solid;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #ff5c5c;
+            color: white;
+        }
+        
+        
+    </style>
+    <script>
+        function addComment() {
+            const commentText = document.getElementById('comment-text').value;
+            const commentList = document.getElementById('comment-list');
+            const newComment = document.createElement('li');
+            newComment.textContent = commentText;
+            newComment.style.background = 'linear-gradient(135deg, #ffecd2, #fcb69f)';
+            newComment.style.margin = '10px 0';
+            newComment.style.padding = '15px';
+            newComment.style.borderRadius = '8px';
+            commentList.appendChild(newComment);
+            document.getElementById('comment-text').value = '';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Product Details</h1>
+    </div>
+    <div class="container">
+        <div class="product-detail">
+            <div class="product-images">
+                <img src="https://m.media-amazon.com/images/I/71aA1VM6pPL._AC_UL480_FMwebp_QL65_.jpg"
+                    alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h2>Almonds & Cashews</h2>
+                <div class="product-price">-49% Discount <br>₹935 (₹93.50 / 100g) <br><span class="mrp"><strike>M.R.P:
+                            ₹1850</strike></span>
+                </div>
+                <div class="product-description">
+                    <p>WONDERLAND FOODS California Almonds (NP) & Cashews W320 (Mangalore Quality) | 1Kg (500g X 2) Delicious & Nutritious
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                    <a href="book.html" class="book">Book</a>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-date">
+            <h3>Estimated Delivery Date</h3>
+            <p>Expected delivery by: 11th June 2024</p>
+        </div>
+        <div class="product-specifications">
+            <h3>Specifications</h3>
+            <ul>
+                <li>Brand:	WONDERLAND FOODS (DEVICE)</li>
+                <li>Item Form:	Solid</li>
+                <li>Flavour:	Dry Fruits Combo</li>
+                
+            </ul>
+        </div>
+        <div class="product-specifications">
+            <h3>About this item</h3>
+            <li>In Box Contents: 500g California Almonds Nonpareil California Almond (Size 26 -28) | 500g Premium Cashews (W320)</li>
+            <li>100% Real Nuts for that crunchy, authentic and delicious taste. It comes in a resealable bag to retain its crunch and freshness. Add a few in your diet and stay energized all day long.</li>
+            <li>Surely natural, these are raw, unsweetened, unsalted, no additives, no preservatives or added flavours. Relish the authentic taste of the nuts and stay healthy and happy.</li>
+           <li>Almonds are one of the most nutritious foods and are loaded with vitamins, minerals, protein and fibre. It provides the perfect crunch for every diet.</li>
+            <li>As cashews add a ton of health benefits and a silky texture without any overwhelming additional flavour, they’re perfect for all your shakes and smoothies!</li>
+           <li> Tough On Stains, Gentle On Hands</li>
+           <li> Add a handful of cashews to your cakes, muffins or any baked goods for that delicious nutty crunch in every bite, which can upgrade your dessert from being just good to absolutely phenomenal.</li>
+        </div>
+        
+        <div class="user-ratings">
+            <h3>Ratings</h3>
+            <ul>
+                <li>
+                    <span class="rating">★★★★☆</span> by User 1
+                </li>
+                <li>
+                    <span class="rating">★★★☆☆</span> by User 2
+                </li>
+            </ul>
+        </div>
+        <div class="comments">
+            <h3>Comments</h3>
+            <ul id="comment-list">
+                <li>Comment 1 by User 1: Great product!</li>
+                <li>Comment 2 by User 2: Satisfactory performance.</li>
+            </ul>
+            <div class="comment-form">
+                <h3>Add a Comment</h3>
+                <textarea id="comment-text" rows="4" placeholder="Write your comment here..."></textarea>
+                <button type="button" onclick="addComment()">Submit</button>
+            </div>
+        </div>
+        <div class="back-button">
+            <a href="grocery.html" class="btn">Back</a>
+        </div>
+    </div>
+</body>
+
+</html>
